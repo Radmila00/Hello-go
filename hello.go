@@ -5,15 +5,14 @@ import (
 )
 
 func main() {
-	n := vote(0, 0, 1)
-	fmt.Println(n)
+	fmt.Println(sumInt(1, 0))
+
+	print(5, 6)
 }
-func vote(x int, y int, z int) int {
-	if x == y || x == z {
-		return x
-	} else if y == z {
-		return y
-	} else {
-		return x
+func sumInt(a ...int) (n int, sum int) {
+	for _, v := range a {
+		n = n + 1
+		sum = sum + v
 	}
+	return n, sum
 }
